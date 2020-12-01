@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+</head>
+<body style="max-width:500px;">
+<ons-splitter>
+  <ons-splitter-side id="menu" side="left" width="220px" collapse>
+    <ons-page>
+      <ons-list>
+        <ons-list-item onclick="fn.load('cartes.html')" tappable>
+          Cartes
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('quiz.html')" tappable>
+          Quiz
+        </ons-list-item>
+      </ons-list>
+    </ons-page>
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+
+<template id="home.html">
+  <ons-gesture-detector>
+  <ons-page id="detect-area">
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Hiragnapp
+      </div>
+    </ons-toolbar>
+    <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+      Swipe right to open the menu!
+    </p>
+  </ons-page>
+  </ons-gesture-detector>
+</template>
+
+<template id="quiz.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Quiz
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</template>
+
+<template id="cartes.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Cartes
+      </div>
+    </ons-toolbar>
+    <ons-gesture-detector>
+    <ons-navigator swipeable id="cardsNavigator" page="card.html"></ons-navigator>
+    </ons-gesture-detector>
+  </ons-page>
+</template>
+
+<template id="card.html">
+  <ons-page id="cards">
+
+  <ons-card>
+    <div class="title" style="text-align: center;color:white;font-weight:bold;">
+      a
+    </div>
+    <div style="color:white;white-space: nowrap;overflow: hidden;text-overflow: clip;">
+      ...............................................................................
+    </div>
+    <img src="https://i.ibb.co/q5H9Jxr/a.png" alt="Onsen UI" style="width: 100%;">
+  </ons-card>
+    </ons-page>
+</template>
+<script>
+window.cards = [
+  ["https://i.ibb.co/q5H9Jxr/a.png", "a", "orange"],
+  ["https://i.ibb.co/Myd5njb/i.png", "i", "#494949"],
+  ["https://i.ibb.co/fNJZhzm/u.png", "u", "magenta"],
+  ["https://i.ibb.co/cg0gzG4/e.png", "e", "yellowgreen"],
+  ["https://i.ibb.co/HqQk4RW/o.png", "o", "deepskyblue"],
+  ["https://i.ibb.co/0KbP1F2/ka.png", "ka", "orange"],
+  ["https://i.ibb.co/pfsftZb/ki.png", "ki", "#494949"],
+  ["https://i.ibb.co/6RmFzwm/ku.png", "ku", "magenta"],
+["https://i.ibb.co/dgY4tFW/ke.png", "ke", "yellowgreen"],
+["https://i.ibb.co/K9XDgsF/ko.png", "ko", "deepskyblue"],
+["https://i.ibb.co/KsjCYzV/sa.png", "sa", "orange"],
+["https://i.ibb.co/Hg91D85/shi.png", "shi", "#494949"],
+["https://i.ibb.co/0cb07X0/su.png", "su", "#494949"],
+["https://i.ibb.co/XJZx5sY/se.png", "se", "yellowgreen"],
+["https://i.ibb.co/GTtNrJs/so.png", "so", "deepskyblue"],
+["https://i.ibb.co/2hvv5bV/ta.png", "ta", "orange"],
+["https://i.ibb.co/nndQDNf/chi.png", "chi", "#494949"],
+["https://i.ibb.co/j45D1pC/tsu.png", "tsu", "magenta"],
+["https://i.ibb.co/4jDsjwG/te.png", "te", "yellowgreen"],
+["https://i.ibb.co/VMH83Dt/to.png", "to", "deepskyblue"],
+["https://i.ibb.co/f8K1GJF/na.png", "na", "orange"],
+["https://i.ibb.co/DR3NknM/ni.png", "ni", "#494949"],
+["https://i.ibb.co/Rb7N0CR/nu.png", "nu", "magenta"],
+["https://i.ibb.co/WgjQpZ2/ne.png", "ne", "yellowgreen"],
+["https://i.ibb.co/0Cr7KYM/no.png", "no", "deepskyblue"],
+["https://i.ibb.co/ZS7kYs3/ha.png", "ha", "orange"],
+["https://i.ibb.co/LSzfRnD/hi.png", "hi", "#494949"],
+["https://i.ibb.co/nQJsJwY/fu.png", "fu", "magenta"],
+["https://i.ibb.co/nCh5JNW/he.png", "he", "yellowgreen"],
+["https://i.ibb.co/vck89s4/ho.png", "ho", "deepskyblue"],
+["https://i.ibb.co/Y7x2wXr/ma.png", "ma", "orange"],
+["https://i.ibb.co/Bq8VF9n/mi.png", "mi", "#494949"],
+["https://i.ibb.co/gD9CrLh/mu.png", "mu", "magenta"],
+["https://i.ibb.co/Yp8PzFs/me.png", "me", "yellowgreen"],
+["https://i.ibb.co/QMdMpbB/mo.png", "mo", "deepskyblue"],
+["https://i.ibb.co/d5NmFS1/ya.png", "ya", "orange"],
+["https://i.ibb.co/YRKgRDW/yu.png", "yu", "magenta"],
+["https://i.ibb.co/T2vjRkc/yo.png", "yo", "deepskyblue"],
+["https://i.ibb.co/F7DWR84/ra.png", "ra", "orange"],
+["https://i.ibb.co/1nzLS60/ri.png", "ri", "#494949"],
+["https://i.ibb.co/k03R8Rs/ro.png", "ro", "deepskyblue"],
+["https://i.ibb.co/4VXLfJB/re.png", "re", "yellowgreen"],
+["https://i.ibb.co/s2Gs3nR/ru.png", "ru", "magenta"],
+["https://i.ibb.co/xDSqp4H/wa.png", "wa", "orange"],
+["https://i.ibb.co/9TnMGm3/wo.png", "wo", "deepskyblue"],
+["https://i.ibb.co/q0rRCNJ/n.png", "n", "dimgray"],
+]
+
+window.index = 0
+
+window.fn = {};
+
+window.fn.open = function() {
+  var menu = document.getElementById('menu');
+  menu.open();
+};
+
+window.fn.load = function(page) {
+  var content = document.getElementById('content');
+  var menu = document.getElementById('menu');
+  content.load(page)
+    .then(menu.close.bind(menu));
+};
+
+window.fn.randomCards = function() {
+  alert("lol");
+  document.getElementById('cartes').content.load("a.card");
+}
+
+document.addEventListener('init', function(event) {
+  var page = event.target;
+
+  if (page.id === 'cards') {
+    if(page.data[0] == undefined){
+      page.data = window.cards[0];
+    }
+    page.querySelector('ons-card img').src = page.data[0];
+    page.querySelector('ons-card .title').innerHTML = page.data[1];
+    page.querySelector('ons-card').style = 'background:'+page.data[2]+';';
+
+  }
+});
+
+document.addEventListener('swiperight', function(event) {
+ document.getElementById('cardsNavigator').popPage();
+});
+
+document.addEventListener('swipeleft', function(event) {
+ window.index += 1;
+ window.index %= window.cards.length;
+ document.getElementById('cardsNavigator').pushPage("card.html", {data:window.cards[window.index]});
+});
+</script>
+</body>
+</html>
